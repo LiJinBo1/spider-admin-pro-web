@@ -58,7 +58,7 @@
 
     <el-table-column label="取消运行" align="center" width="80px">
       <template slot-scope="scope">
-        <JobCancel :job="scope.row.id" :project="project" :disabled="scope.row.status == 'finished'"
+        <JobCancel :job="scope.row.id" :project="project" :scrapydServerId="scrapydServerId" :disabled="scope.row.status == 'finished'"
           @success="$emit('success')" />
       </template>
     </el-table-column>

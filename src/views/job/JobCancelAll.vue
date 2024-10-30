@@ -13,6 +13,7 @@ export default {
 
   props: {
     project: { type: String },
+    scrapydServerId: { type: String },
   },
 
   components: {},
@@ -27,6 +28,7 @@ export default {
     async handleCancel() {
       const res = await this.$Http.scrapydCancelAllJob({
         project: this.project,
+        scrapydServerId: this.scrapydServerId,
       });
 
       if (res.code == 0) {
