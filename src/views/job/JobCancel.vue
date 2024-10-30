@@ -15,6 +15,7 @@ export default {
   props: {
     job: { type: String },
     project: { type: String },
+    scrapydServerId: { type: String },
   },
 
   components: {},
@@ -32,6 +33,7 @@ export default {
       const res = await this.$Http.scrapydCancel({
         project: this.project,
         job: this.job,
+        scrapydServerId: this.scrapydServerId,
       });
 
       if (res.code == 0) {

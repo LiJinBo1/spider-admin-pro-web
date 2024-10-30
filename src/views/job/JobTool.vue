@@ -34,6 +34,7 @@
 
     <JobCancelAll
       class="ml-sm"
+      :scrapydServerId="scrapydServerId"
       :project="project"
       size="small"
     />
